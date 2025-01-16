@@ -1,6 +1,6 @@
-let currentPage = 1; // Track the current page
+let currentPage = 1; 
 let API_KEY = '48260581-d20f1b8695ea80f5cff4b2e60';
-const query = 'animals'; // Your search term
+const query = 'animals'; 
 const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(query)}&per_page=20&page=`;
 
 
@@ -22,12 +22,12 @@ async function displayImages(page) {
         imgElement.alt = image.tags; 
 
 
-        const link = document.createElement('a');
-        link.href = image.pageURL;
-        link.target = '_blank'; 
-        link.appendChild(imgElement);
+        // const link = document.createElement('a');
+        // link.href = image.pageURL;
+        // link.target = '_blank'; 
+        // link.appendChild(imgElement);
 
-        gallery.appendChild(link); 
+        gallery.appendChild(imgElement); 
     });
 }
 
