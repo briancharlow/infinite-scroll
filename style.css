@@ -1,21 +1,20 @@
-
-*{
+* {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#imageGallery{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 20px;
+
+#imageGallery {
+    columns: 350px auto;
+    column-gap: .75rem;
     padding: 20px;
 }
 
-.post{
-    margin: 20px;
-    object-fit: cover;
-    /* width: auto; */
-    height: fit-content;
+.post {
+    break-inside: avoid;
+    margin-bottom: .75rem;
     width: 100%;
-}    
-    
+    height: auto;
+    display: block; /* This helps prevent weird spacing issues */
+}
